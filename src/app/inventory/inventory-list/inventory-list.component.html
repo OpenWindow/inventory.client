@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success" (click)="onNewInventoryClick()" >New Inventory</button>
+  </div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="col-xs-12">
+    <app-inventory-item 
+      *ngFor="let itmX of inventoryItems; let i = index" 
+      [item]="itmX" 
+      [index]="i">
+    </app-inventory-item>
+  </div>
+</div>

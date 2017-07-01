@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-xs-12">
+    <img style="max-height: 200px" [src]="item.imagePath" alt="{{ item.name }}" class="img-responsive">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1> {{ item.name }} </h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="btn-group" appDropDown>
+      <button type="button" class="btn btn-primary dropdown-toggle">
+        Manage Inventory <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a style="cursor: pointer" (click)="onEditClick()">Edit</a></li>
+        <li><a style="cursor: pointer" (click)="onDeleteClick()">Delete</a></li>
+        <li><a style="cursor: pointer">Something else here</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a style="cursor: pointer">Separated link</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p> {{ item.description }} </p>
+  </div>
+</div>
