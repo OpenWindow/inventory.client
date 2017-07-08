@@ -1,3 +1,67 @@
-<p>
-  inventory-edit works!
-</p>
+<div class="row" style="margin-top:10px;">
+  <div class="col-xs-12">
+    <form [formGroup]="inventoryItemForm" (ngSubmit)="onFormSave()">
+      <div class="row">
+        <div class="col-xs-12">
+          <button 
+            class="btn btn-primary" 
+            type="submit"
+            [disabled]="!inventoryItemForm.valid">{{ editMode ? 'Update' : 'Save' }}</button>
+          <button 
+            class="btn btn-danger" 
+            type="button"
+            (click)="onCancel()">Cancel</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text"
+                   class="form-control"
+                   formControlName="name"
+                   name="name">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea type="text"
+                   class="form-control"
+                   name="description"
+                   formControlName="description"
+                   rows="5">
+            </textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="imagePath">Image URL</label>
+            <input type="text"
+                   class="form-control"
+                   name="imagePath"
+                   formControlName="imagePath"
+                   #imagePath>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <img [src]="imagePath.value" alt="" class="img-responsive">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4">
+          <input type="text" class="form-control" name="tag">
+        </div>
+        <div class="col-xs-2">
+          <button class="btn btn-danger" type="button">X</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

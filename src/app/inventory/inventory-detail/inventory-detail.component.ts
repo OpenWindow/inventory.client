@@ -29,7 +29,8 @@ export class InventoryDetailComponent implements OnInit {
   }
 
   onDeleteClick(){
-    console.log('delete clicked');
+    this.inventoryService.deleteInventoryItem(this.id);
+    this.router.navigate(['../'], { relativeTo: this.route});
   }
 
 }

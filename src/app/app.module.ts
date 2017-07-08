@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -16,6 +16,7 @@ import { InventoryDetailComponent } from './inventory/inventory-detail/inventory
 import { DropDownDirective } from './shared/dropdown.directive';
 
 import { ShoppingListService } from  './shopping-list/shopping-list.service';
+import { InventoryService } from './inventory/inventory.service';
 import { InventoryStartComponent } from './inventory/inventory-start/inventory-start.component';
 import { InventoryEditComponent } from './inventory/inventory-edit/inventory-edit.component';
 
@@ -36,10 +37,13 @@ import { InventoryEditComponent } from './inventory/inventory-edit/inventory-edi
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ShoppingListService],
+  providers: [
+    ShoppingListService,
+    InventoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
