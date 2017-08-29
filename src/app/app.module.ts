@@ -19,6 +19,8 @@ import { ShoppingListService } from  './shopping-list/shopping-list.service';
 import { InventoryService } from './inventory/inventory.service';
 import { InventoryStartComponent } from './inventory/inventory-start/inventory-start.component';
 import { InventoryEditComponent } from './inventory/inventory-edit/inventory-edit.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { InventoryEditComponent } from './inventory/inventory-edit/inventory-edi
     InventoryDetailComponent,
     DropDownDirective,
     InventoryStartComponent,
-    InventoryEditComponent
+    InventoryEditComponent,
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,

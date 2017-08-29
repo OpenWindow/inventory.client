@@ -6,6 +6,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { InventoryDetailComponent } from './inventory/inventory-detail/inventory-detail.component';
 import { InventoryStartComponent } from './inventory/inventory-start/inventory-start.component';
 import { InventoryEditComponent } from './inventory/inventory-edit/inventory-edit.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/inventory', pathMatch: 'full' },
@@ -17,7 +18,8 @@ const routes: Routes = [
             { path: ':id/edit', component: InventoryEditComponent }
         ]
     },
-    { path: 'shopping-list', component: ShoppingListComponent }
+    { path: 'shopping-list', component: ShoppingListComponent },
+    { path: 'signup', component: SignupComponent }
 ];
 
 @NgModule(
